@@ -193,7 +193,19 @@ const database = {
     ]
 }
 
+// Export sections of database with getter functions
 
+export const getBands = () => {
+  return database.bands.map(band => ({...band}))
+}
+
+export const getVenues = () => {
+  return database.venues.map(venue => ({...venue}))
+}
+
+export const getBookings = () => {
+  return database.bookings.map(booking => ({...booking}))
+}
   
 
   
