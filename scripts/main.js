@@ -1,3 +1,4 @@
+import { BandList } from "./Bands.js"
 import { VenueList } from "./Venues.js"
 
 
@@ -15,10 +16,12 @@ const mainHTMLlist = `
 </section>
 <div class="flex_section">
     <section class="venues">
-    ${VenueList()}
+      <h3>Venues</h3>
+      ${VenueList()}
     </section>
     <section class="bands">
-    <h3>Filler Text</h3>
+      <h3>Bands</h3>
+      ${BandList()}
     </section>
 </div>
 `
