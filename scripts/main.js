@@ -1,4 +1,5 @@
 import { BandList } from "./Bands.js"
+import { BookingList } from "./Bookings.js"
 import { VenueList } from "./Venues.js"
 
 
@@ -12,7 +13,8 @@ const mainContainer = document.querySelector(".container")
 // Build final HTML list
 const mainHTMLlist = `
 <section class="bookings">
-<h3>Filler Text</h3>
+  <h3>Current Bookings</h3>
+  ${BookingList()}
 </section>
 <div class="flex_section">
     <section class="venues">

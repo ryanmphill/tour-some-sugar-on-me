@@ -10,11 +10,15 @@
 
 .flex_section {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .bands, .bookings, .venues {
     border: 2px dashed slateblue;
     padding: 0 0.5rem;
     margin: 0.5rem 0.25rem;
+}
+
+.bands, .venues {
+    width: 48%;
 }
