@@ -13,11 +13,11 @@ const venues = getVenues()
 const bookings = getBookings()
 const bands = getBands()
 
-/* Create a function to find bookings with 2 parameters - one for the single venue object, and
+/* Create a function to find bookings with 2 parameters - one for the selected venue id, and
 one for the array of bookings objects. The function should return an array of 
 the booking objects for a particular venue  */
 
-const findBookings = (clickedVenueId, bookingsArray) => {
+const findVenueBookings = (clickedVenueId, bookingsArray) => {
     // Define a default array
     let venueBookings = []
     // Iterate through the bookingsArray
@@ -31,7 +31,7 @@ const findBookings = (clickedVenueId, bookingsArray) => {
 }
 
 /* Creat a function whose job it is to take the returned array from 
-findBookings, and return an array of the band names with a matching foreign key */
+findVenueBookings, and return an array of the band names with a matching foreign key */
 
 const findBands = (clickedVenueBookings, bandsArray) => {
     // Define a default array
@@ -63,7 +63,7 @@ document.addEventListener(
             // Store clicked venue name
             let clickedVenueName = itemClicked.dataset.name
             // Invoke and store the findBookings function as venueBookings
-            const venueBookings = findBookings(clickedVenueId, bookings)
+            const venueBookings = findVenueBookings(clickedVenueId, bookings)
             // Invoke and store the findBands function and bandsPlaying
             const bandsPlaying = findBands(venueBookings, bands)
             //Define a default string
